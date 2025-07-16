@@ -285,7 +285,7 @@
 	
 	<script>
 		$(document).ready(function () {
-			fetch('/json/images.json')
+			fetch('json/images.json')
 				.then(response => response.json())
 				.then(images => {
 					console.log(images);
