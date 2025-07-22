@@ -246,4 +246,14 @@ font-weight: bold;
 .div-contact-block a:hover{
     color: var(--secondary-color);
 }
-
+.second-bg-1{
+    background-color: #f7f7f7 !important;
+}
+.box_contacts a:hover{
+    color: var(--secondary-color);
+}
+.service-list-catering>li{
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding-top: 5px;
+}

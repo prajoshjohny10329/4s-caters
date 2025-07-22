@@ -140,7 +140,7 @@
 	</header>
 	<!-- /header -->
 
-	<main>
+	<main class="second-bg-1">
 		<div class="hero_single inner_pages background-image" style="background: url(images/bg/about-bg.png);" >
 			<div class="opacity-mask">
 				<div class="container">
@@ -156,6 +156,84 @@
 			<div class="frame white"></div>
 		</div>
 		<!-- /hero_single -->
+
+		<div class="second-bg-1 mb-5">
+		    <div class="container margin_60_40">
+		        <div class="row justify-content-center">
+		            <div class="col-lg-4">
+		                <div class="box_contacts">
+		                    <i class="icon_phone"></i>
+		                    <h2>Contact Number</h2>
+		                    <a href="tel:+91 94956 61288">+91 94956 61288</a> <br>
+		                    <a href="tel:+91 94956 61288">+91 94956 61288</a> <br>
+		                    <a href="tel:+91 94956 61288">+91 94956 61288</a> <br>
+
+		                </div>
+		            </div>
+					<div class="col-lg-4">
+		                <div class="box_contacts">
+		                    <i class="icon_mail"></i>
+		                    <h2>Connect By Mail</h2>
+							<a href="mailto:contact@4scaters.com">contact@4scaters.com</a>
+							<br>
+							<a href="mailto:contact@4scaters.com">contact@4scaters.com</a>
+		                </div>
+		            </div>
+		            <div class="col-lg-4">
+		                <div class="box_contacts">
+		                    <i class="icon_pin_alt"></i>
+		                    <h2>Address</h2>
+		                    <a href="https://share.google/dsQQQmn5p1wB4pMqm">4S Catering & Events Aditya Apartment, Near Incom Tax Office, Next to Indusind Bank, P.O, Kowdiar, Thiruvananthapuram, Kerala 695003</a>
+		                    
+		                </div>
+		            </div>
+		            
+		        </div>
+		        <!-- /row -->
+		    </div>
+		    <!-- /container -->
+		</div>
+		<!-- /bg_gray -->
+
+		<div class="container  mt-5">
+		    <div class="row">
+		        <div class="col-lg-5 col-md-6 add_bottom_25">
+					<h2 class="mb_5 ">Get in Touch</h2>
+					<p class="text-black">Have a question or want to book our catering services? Fill out the form below, and our team will get back to you shortly.</p>
+		            <div id="message-contact"></div>
+		            <form method="post" action="form-dummy" >
+		                <div class="form-group">
+		                    <input class="form-control" type="text" placeholder="Name" id="name_contact" name="name_contact" required>
+		                </div>
+		                <div class="form-group">
+		                    <input class="form-control" type="email" placeholder="Email" id="email_contact" name="email_contact" required>
+		                </div>
+		                <div class="form-group">
+		                    <input class="form-control" type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" required>
+		                </div>
+						<div class="form-group">
+							<select class="form-control"  id="event" name="event">
+								<option value="wedding">Wedding</option>
+								<option value="corporate">Corporate</option>
+								<option value="birthday">Birthday</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+		                <div class="form-group">
+		                    <textarea class="form-control" style="height: 120px;" placeholder="Message" id="message_contact" name="message_contact"></textarea>
+		                </div>
+		                <div class="form-group">
+		                    <input class="btn_1 full-width" type="submit" value="Submit" id="submit-contact">
+		                </div>
+		            </form>
+		        </div>
+		        <div class="col-lg-7 col-md-6 add_bottom_25">
+		            <div style="width: 100%"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.783611791891!2d76.95839357455257!3d8.525349296670345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbd4955554e7%3A0xf20a2bd97d41b216!2s4S%20Catering%20%26%20Event!5e1!3m2!1sen!2sin!4v1753168004225!5m2!1sen!2sin" width="100%" height="510" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+		        </div>
+		    </div>
+		    <!-- /row -->
+		</div>
+		<!-- /container -->
 
 	</main>
 	<!-- /main -->
@@ -315,56 +393,6 @@
 	<!-- SPECIFIC SCRIPTS (wizard form) -->
 	<script src="js/wizard/wizard_scripts.min.js"></script>
 	<script src="js/wizard/wizard_func.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.counter-number').each(function () {
-				var $this = $(this),
-					countTo = $this.attr('data-count');
-				$({ countNum: $this.text() }).animate({
-					countNum: countTo
-				},
-					{
-						duration: 3000,
-						easing: 'swing',
-						step: function () {
-							$this.text(Math.floor(this.countNum) + "+");
-						},
-						complete: function () {
-							$this.text(this.countNum + "+");
-						}
-					});
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			fetch('json/images.json')
-				.then(response => response.json())
-				.then(images => {
-					console.log(images);
-
-					const container = document.getElementById('dynamic-image-container');
-
-					for (let index = 0; index < Math.min(images.length, 8); index++) {
-						const image = images[index];
-						const block = document.createElement('li');
-						block.innerHTML = `
-        <div class="item">
-            <div class="item-img">
-                <img src="${image}" alt=" 4S Catering & Events Previous Events Images">
-                <div class="content">
-                    <a href="${image}" title=" 4S Catering & Events Previous Events Images" data-effect="mfp-zoom-in"><i class="arrow_expand"></i></a>
-                </div>
-            </div>
-        </div>
-    `;
-						container.appendChild(block); // Replace 'container' with your target element
-					}
-
-				})
-				.catch(error => console.error('Error fetching images:', error));
-		});
-	</script>
 
 </body>
 

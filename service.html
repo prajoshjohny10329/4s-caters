@@ -118,7 +118,7 @@
 									<li><a href="service.html">Stage, Lighting & Audio Setup</a></li>
 								</ul>
 							</li>
-							
+
 						</ul>
 					</li>
 
@@ -141,13 +141,13 @@
 	<!-- /header -->
 
 	<main>
-		<div class="hero_single inner_pages background-image" style="background: url(images/bg/about-bg.png);" >
+		<div class="hero_single inner_pages background-image" style="background: url(images/bg/about-bg.png);">
 			<div class="opacity-mask">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-xl-9 col-lg-10 col-md-8">
-							<h1 class="text-black">This Page Will coming Soon</h1>
-							<p class="text-black">Crafting Memorable Events with Culinary Passion</p>
+							<h1 class="text-black">Our Services</h1>
+							<p class="text-black">Complete Catering & Event Solutions in Trivandrum</p>
 						</div>
 					</div>
 					<!-- /row -->
@@ -155,6 +155,114 @@
 			</div>
 			<div class="frame white"></div>
 		</div>
+
+		<div class="my-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" >
+						<h2>Our Catering Services</h2>
+						<h6 class="text-black">Delicious Food, Impeccable Service, Unforgettable Events</h6>
+						<p class="mt-2">At 4S Catering and Events, we specialize in delivering exceptional catering
+							services that delight your guests and bring your celebration to life. Whether it’s a
+							traditional Kerala wedding, a cozy birthday party, or a grand corporate gala, our culinary
+							team and service professionals handle everything — from preparation to clean-up — with
+							precision, passion, and care.</p>
+						<ul class="service-list-catering" >
+							<li >Wedding Catering</li>
+							<li>Engagement & Reception Catering</li>
+							<li>Birthday Party Catering</li>
+							<li>Corporate Event Catering</li>
+							<li>Housewarming & Private Party Catering</li>
+							<li>Cocktail & Evening Parties</li>
+							<li>Custom Menu Creation</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<img src="images/services/Catering-Services.jpg" width="100%" class="rounded" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+
+		<div class="margin_60_40">
+			<h2 class="text-center my-5">Event Management Services</h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" data-cue="slideInUp">
+						<article class="blog">
+							<figure>
+								<a><img src="images/services/events/complete-event.jpeg" alt="">
+								</a>
+							</figure>
+							<div class="post_info">
+								<h2>Complete Event Planning</h2>
+								<p>Let us handle the entire event from concept to execution.
+									Our team coordinates every element — food, décor, logistics, and timing.
+									You can relax and enjoy the celebration without stress.</p>
+							</div>
+						</article>
+						<!-- /services single -->
+					</div>
+					<!-- /col -->
+
+					<div class="col-md-6" data-cue="slideInUp">
+						<article class="blog">
+							<figure>
+								<a><img src="images/services/events/venue.jpg" alt="">
+								</a>
+							</figure>
+							<div class="post_info">
+								<h2>Venue Selection Assistance</h2>
+								<p>We help you find the perfect venue that suits your event size and style.
+									From banquet halls to open-air locations, we offer the best recommendations.
+									We also assist with bookings and site visits across Trivandrum.</p>
+							</div>
+						</article>
+						<!-- /services single -->
+					</div>
+					<!-- /col -->
+					<div class="col-md-6" data-cue="slideInUp">
+						<article class="blog">
+							<figure>
+								<a><img src="images/services/Flower-Arrangements.webp" alt="">
+								</a>
+							</figure>
+							<div class="post_info">
+								<h2>Theme-based Décor & Floral Arrangements</h2>
+								<p>Our decorators bring your vision to life with creative themes and elegant styling.
+									Whether it's traditional, modern, or customized décor, we make it beautiful.
+									Fresh floral arrangements and aesthetic details create a memorable ambiance.
+								</p>
+							</div>
+						</article>
+						<!-- /services single -->
+					</div>
+					<!-- /col -->
+					<div class="col-md-6" data-cue="slideInUp">
+						<article class="blog">
+							<figure>
+								<a><img src="images/services/Mandapam-Decoration.jpg" alt="">
+								</a>
+							</figure>
+							<div class="post_info">
+								<h2>Stage, Lighting & Audio Setup</h2>
+								<p>From basic lighting to full concert-grade sound, we’ve got it covered.
+									Perfect for weddings, corporate events, and special functions needing attention.
+									We manage stage design, microphone setup, LED screens, and lighting effects.
+								</p>
+							</div>
+						</article>
+						<!-- /services single -->
+					</div>
+
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /col -->
+			<!-- /row -->
+		</div>
+		<!-- /container -->
 		<!-- /hero_single -->
 
 	</main>
@@ -315,56 +423,6 @@
 	<!-- SPECIFIC SCRIPTS (wizard form) -->
 	<script src="js/wizard/wizard_scripts.min.js"></script>
 	<script src="js/wizard/wizard_func.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.counter-number').each(function () {
-				var $this = $(this),
-					countTo = $this.attr('data-count');
-				$({ countNum: $this.text() }).animate({
-					countNum: countTo
-				},
-					{
-						duration: 3000,
-						easing: 'swing',
-						step: function () {
-							$this.text(Math.floor(this.countNum) + "+");
-						},
-						complete: function () {
-							$this.text(this.countNum + "+");
-						}
-					});
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			fetch('json/images.json')
-				.then(response => response.json())
-				.then(images => {
-					console.log(images);
-
-					const container = document.getElementById('dynamic-image-container');
-
-					for (let index = 0; index < Math.min(images.length, 8); index++) {
-						const image = images[index];
-						const block = document.createElement('li');
-						block.innerHTML = `
-        <div class="item">
-            <div class="item-img">
-                <img src="${image}" alt=" 4S Catering & Events Previous Events Images">
-                <div class="content">
-                    <a href="${image}" title=" 4S Catering & Events Previous Events Images" data-effect="mfp-zoom-in"><i class="arrow_expand"></i></a>
-                </div>
-            </div>
-        </div>
-    `;
-						container.appendChild(block); // Replace 'container' with your target element
-					}
-
-				})
-				.catch(error => console.error('Error fetching images:', error));
-		});
-	</script>
 
 </body>
 
